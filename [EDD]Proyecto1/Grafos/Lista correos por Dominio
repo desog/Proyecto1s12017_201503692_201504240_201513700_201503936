@@ -1,0 +1,12 @@
+digraph {
+	0 [label=Usac]
+	1 [label=Memo]
+	2 [label=Juan]
+	3 [label=Memito]
+	4 [label=Jhon]
+		0 -> 1
+		1 -> 3
+		1 -> 2
+		2 -> 1
+		3 -> 4
+}

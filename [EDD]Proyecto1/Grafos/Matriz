@@ -1,0 +1,23 @@
+digraph {
+	A [label=" "]
+	0 [label=Biblioteca]
+	1 [label=Usac]
+	2 [label=Memo]
+	3 [label=Cobros]
+	4 [label=Memo]
+	5 [label=Memito]
+	6 [label=Ventas]
+	7 [label=Memito]
+	8 [label=Jhon]
+		0 -> 1
+		1 -> 4
+		0 -> 4
+		0 -> 3
+		4 -> 0
+		4 -> 7
+		3 -> 7
+		3 -> 6
+		7 -> 3
+		7 -> 8
+		6 -> 8
+}
