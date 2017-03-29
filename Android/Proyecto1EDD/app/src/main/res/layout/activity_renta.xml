@@ -50,12 +50,54 @@
         />
 
     <TextView
+        android:text="DIAS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ettiemporenta"
+        android:layout_toRightOf="@+id/tvrenta"
+        android:layout_toEndOf="@+id/tvrenta"
+        android:layout_marginBottom="11dp"
+        android:id="@+id/tvdias" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_marginTop="21dp"
+        android:id="@+id/ettiemporenta"
+        android:layout_below="@+id/tvrenta"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
         android:text="TIEMPO DE RENTA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:id="@+id/tvrenta"
         android:layout_below="@+id/tvdescripcion"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="87dp"
-        android:id="@+id/tvrenta" />
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="29dp"
+        android:id="@+id/btatras"
+        android:background="@drawable/q"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btrentar"
+        android:background="@drawable/btrentar"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/tvdias"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

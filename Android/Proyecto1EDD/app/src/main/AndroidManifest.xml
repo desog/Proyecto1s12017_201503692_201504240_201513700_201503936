@@ -20,7 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Menu" />
-        <activity android:name=".Renta"></activity>
+        <activity android:name=".Renta" />
+        <activity android:name=".devolucion"></activity>
     </application>
 
 </manifest>

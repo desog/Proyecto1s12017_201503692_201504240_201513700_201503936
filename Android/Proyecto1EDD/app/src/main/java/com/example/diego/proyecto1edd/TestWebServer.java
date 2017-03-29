@@ -1,5 +1,6 @@
 package com.example.diego.proyecto1edd;
 
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -18,39 +19,60 @@ import com.squareup.okhttp.Response;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.LinkedList;
 import java.util.logging.Level;
 public class TestWebServer {
-     public static OkHttpClient webClient = new OkHttpClient();
+    public static OkHttpClient webClient = new OkHttpClient();
 
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+//        String nombre = "Marco";
+//        RequestBody formBody = new FormEncodingBuilder()
+//                .add("dato", nombre)
+//
+//                .build();
+//        String r = getString("metodoWeb", formBody);
+//        System.out.println(r + "---");
+    }
 
-
-    public  boolean Login(String dato,String pass,String empresa,String depto){
+    public  String Login(String nombre, String pass,String empresa,String depto) {
         RequestBody Cuerpo = new FormEncodingBuilder()
-                .add("dato", dato)
-                .add("dato1",pass)
-                .add("dato2",empresa)
-                .add("dato3",depto)
+                .add("empresa", empresa)
+                .add("departamento", depto)
+                .add("username", nombre)
+                .add("password", pass)
+                .build();
+        System.out.println(empresa);
+        System.out.println(depto);
+        System.out.println(nombre);
+        System.out.println(pass);
+
+        String r = getString("inicioSesion", Cuerpo);
+        System.out.println(r + "!!!!");
+        return r;
+    }
+
+    public String idproductos(){
+        String a = "nada";
+        RequestBody Cuerpo = new FormEncodingBuilder()
+                .add("nombre", a)
 
                 .build();
-        String r = getString("metodoWeb", Cuerpo);
-        if (r=="HECHO"){
-            return true;
-
-        } else {
-            return false;
-        }
-
-
+        String r = getString("nuevo", Cuerpo);
+        System.out.print(r+"!!!!!!");
+        return r ;
     }
 
 
 
 
 
-    
-    
- 
-     public  String getString(String metodo, RequestBody formBody) {
+
+
+
+    public  String getString(String metodo, RequestBody formBody) {
 
         try {
             URL url = new URL("http://192.168.0.100:5000/" + metodo);
